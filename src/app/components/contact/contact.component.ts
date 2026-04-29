@@ -11,7 +11,7 @@ export class ContactComponent {
   constructor(private infoService: InfoService) { }
   ditto = signal('');
   ngOnInit() {
-    this.infoService.getPokemon().then((pokemon) => {
+    this.infoService.getPokemon().then((pokemon: any) => {
       this.ditto.set(pokemon.sprites.other["official-artwork"].front_default)
     });
   }
